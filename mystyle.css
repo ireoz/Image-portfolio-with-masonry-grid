@@ -1,0 +1,150 @@
+:root {
+  --background-color: #3D3D3D;
+  --foreground-color: #FFD500;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+html{
+  font-size: 62.5%;
+}
+
+
+body {
+    background-color:var(--background-color);
+    color:var(--foreground-color);
+    padding: 1rem;
+  }
+
+
+  /* header section - navbar and logo style */
+  .heading{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    margin-left: 1rem;
+    text-align: center;
+  }
+
+  .heading-container {
+    align-items:  center;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .heading-container > img {
+    height: auto;
+    width: 9rem;
+  }
+
+  .navbar-top{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #burger-bar {
+    font-size: 3.5rem;
+    
+  
+  }
+  
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    padding: 0;  
+  }
+
+  .navbar-list.active {
+    display: flex;
+  }
+
+  li {
+    font-size: 1.9rem;
+    list-style-type: none;
+    margin-bottom: 1rem;
+    margin: auto;
+   
+    
+  }
+
+  li a {
+    color: var(--foreground-color);
+    text-decoration: none;
+  }
+
+
+
+/* Image card style */
+
+.card {
+  margin-top: 1.5rem;
+  margin: auto;
+  max-width: 500px;
+}
+
+.card-img > img {
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card-text {
+  font-size: 1.7rem;
+}
+
+
+/* grid style */
+
+.grid-container{
+  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: auto;
+ 
+}
+
+/* make website responsive */
+
+  @media screen and (min-width: 1024px) {
+
+    #burger-bar {
+      display: none;
+      font-size: 3.5rem;
+    }
+
+    .navbar-list {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+     
+    }
+
+    .grid-container{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    .heading{
+      display: block;
+      font-size: 3rem;
+      margin-left: 1rem;
+      text-align: center;
+    }
+  
+    .heading-container {
+      align-items:  center;
+      display: flex;
+      margin-bottom: 1rem;
+      margin: auto;
+    }
+
+    .heading-container > img {
+      height: auto;
+      width: 12rem;
+    }
+    
+  }
